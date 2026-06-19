@@ -1,0 +1,15 @@
+c = input("Enter secret code:")
+g = input("Enter your guess:")
+h, n = 0, 0
+cr, gr = [], []
+for x, y in zip(c, g):
+    if x == y:
+        h += 1
+    else:
+        cr.append(x)
+        gr.append(y)
+for y in gr:
+    if y in cr:
+        n += 1
+        cr.remove(y)
+print(f"output: {h}H{n}N")
